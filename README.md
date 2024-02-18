@@ -1,0 +1,1 @@
+# Electron camera app for ALPR/ANPR
