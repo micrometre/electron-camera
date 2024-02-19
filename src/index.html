@@ -4,6 +4,11 @@
     <title>Camera Test</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+  />
+  <script defer src="preload.js"></script>
   </head>
   <body>
 <div>
@@ -11,10 +16,14 @@
     <h2 >
         Upload Image/phote File
     </h2>
+    <button  id="startBtn" class="button is-primary" onclick="startRecord();">Start</button>
+    <button id="stopBtn" class="button is-warning" onclick="stopRecord();">Stop</button>
+    <hr />
 </div>
 
 <script>
 </script>
+    <video id="localVideo" muted autoplay></video>
     <video id="camera" autoplay> </video>
 
 
