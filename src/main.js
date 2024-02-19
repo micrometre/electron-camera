@@ -12,15 +12,19 @@ app.on('ready', function() {
     height: 600, 
     webPreferences: {
       nodeIntegration: true,
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      devTools: true
+
 
     }
   });
+  mainWindow.webContents.openDevTools()
   mainWindow.loadURL('file://' + __dirname + '/index.html');
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
 });
+
 try {
   require('electron-reloader')(module)
 } catch (_) {}
